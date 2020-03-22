@@ -1,10 +1,12 @@
 from selenium import webdriver
 
+username="8002105606"
+pw="Itsmebaby@12"
 
 class Instabot:
     from selenium import webdriver
     from time import sleep
-    from secrets import pw
+    #from secrets import pw
 
     class InstaBot:
         def __init__(self, username, pw):
@@ -60,5 +62,5 @@ class Instabot:
                 .click()
             return names
 
-    my_bot = InstaBot('_aaronjack', pw)
+    my_bot = InstaBot(username, pw)
     my_bot.get_unfollowers()
