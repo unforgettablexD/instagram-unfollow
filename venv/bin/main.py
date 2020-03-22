@@ -9,9 +9,6 @@ class InstaBot:
         self.username = username
         self.driver.get("https://instagram.com")
         sleep(2)
-        #self.driver.find_element_by_xpath("//a[contains(text(), 'Log in')]")\
-          #  .click()
-        #sleep(2)
         self.driver.find_element_by_xpath("//input[@name=\"username\"]")\
             .send_keys(username)
         self.driver.find_element_by_xpath("//input[@name=\"password\"]")\
@@ -38,10 +35,7 @@ class InstaBot:
 
     def _get_names(self):
         sleep(2)
-        #sugs = self.driver.find_element_by_xpath('//h4[contains(text(), Suggestions)]')
-        #self.driver.execute_script('arguments[0].scrollIntoView()',)#, sugs)
-        #sleep(2)
-        scroll_box = self.driver.find_element_by_xpath("/html/body/div[4]/div/div[2]")#/html/body/div[4]/div/div[2]
+        scroll_box = self.driver.find_element_by_xpath("/html/body/div[4]/div")
         last_ht, ht = 0, 1
         while last_ht != ht:
             last_ht = ht
